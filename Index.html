@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font awesome icons-->
+    <script src="https://kit.fontawesome.com/69d6781e1c.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <title>Week2</title>
+</head>
+<style>
+    body {
+        /* background-color: rgb(248, 245, 70); */
+        background-color: black;
+    }
+
+    #root {
+        color: whitesmoke;
+        font-family: 'Bree Serif', serif;
+        font-size: large;
+        display: grid;
+        grid-template-areas:
+            'head head head head'
+            'box1 box1 box2 box2'
+            'box3 box3 box3 box3'
+            'footer footer footer footer';
+    }
+
+    .box {
+        border-radius: 100px;
+    }
+
+    #head {
+        color: blue;
+        display: block;
+        width: 400px;
+        position: relative;
+        left: 438px;
+    }
+
+    #box1 {
+        grid-area: box1;
+        margin: 10px;
+        padding: 15px;
+        /* background-color: rgb(219, 54, 54); */
+        background-color: rgb(214, 141, 141);
+        color: rgb(128, 2, 2);
+    }
+
+    #box2 {
+        grid-area: box2;
+        margin: 10px;
+        padding: 15px;
+        /* background-color: rgb(70, 70, 216); */
+        background-color: rgb(176, 176, 233);
+        color: rgb(11, 11, 134);
+    }
+
+    #box3 {
+        /* background-color: blueviolet; */
+        background-color: plum;
+        color: rgb(102, 9, 102);
+        grid-area: box3;
+        margin: 10px;
+        padding: 15px;
+        border-radius: 100px;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        border-radius: 100px;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    footer a:hover {
+        color: red;
+    }
+
+    footer div {
+        margin: 5px 10px
+    }
+
+    /* Utility Classes */
+    .h-primary {
+        text-align: center;
+        animation: head1 5s ease-out 1s 4;
+    }
+
+    @keyframes head1 {
+        0% {
+            color: green;
+            font-weight: bold;
+        }
+
+        50% {
+            color: brown;
+            font-weight: bolder;
+        }
+
+        100% {
+            color: purple;
+        }
+    }
+
+    .btn-box{
+        display:flex;
+        justify-content: center;
+    } 
+
+    .btn{
+        color: bisque;
+        background-color:brown;
+        margin:5px;
+        padding:5px;
+        width:100px;
+        border:none;
+        border-radius:12px;
+        font-family: 'Bree Serif', serif;
+        cursor:pointer;
+    }
+
+    .btn:hover{
+        color: yellow;
+        width:110px;
+        height:30px;
+    }
+
+    .h-secondary {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="root">
+        <div id="head">
+            <h1 class="h-primary">Week 2 Task</h1>
+        </div>
+
+        <!-- Functional Requirement Section -->
+        <div class="box" id="box1">
+            <h3 class="h-secondary">Functional Requirements</h3>
+            <div id="hide1">
+                <ul id="ul1">
+                    <li class="list1" id="list1" onclick="number1()">System should provide signup and login options,as such, users  have their own identity.</li>
+                    <li class="list1" id="list2" onclick="number2()">The system should store the user's signup details  in a database.</li>
+                    <li class="list1" id="list3" onclick="number3()">The system should allow  users to log in or link to other accounts  such as Google or Facebook.</li>
+                    <li class="list1" id="list4" onclick="number4()">Password of the user should be stored in dashes to make it more secure.</li>
+                    <li class="list1" id="list5" onclick="number5()">It should allow  users to change their passwords at any time. Users should also be able to change their password in case they forget it using their confirmed email address.</li>
+                    <li class="list1" id="list6" onclick="number6()">User's password details should be saved with proper encryption</li>
+                    <li class="list1" id="list7" onclick="number7()">If an incorrect password is entered, the system should notify the user with a message, and after the correct password, send a confirmation message to the user's other linked accounts  before continuing.</li>
+                    <li class="list1" id="list8" onclick="number8()">After 60 minutes of inactivity, The system should be able to automatically log out a user.</li>
+                    <li class="list1" id="list9" onclick="number9()">An interface should be provided by the system where the users could write their queries.</li>
+                    <li class="list1" id="list10" onclick="number10()">User's queries should be encrypted as well to keep user privacy.</li>
+                    <li class="list1" id="list11" onclick="number11()">The system should use state-of-the-art algorithms to provide  answers to user questions.</li>
+                    <li class="list1" id="list12" onclick="number12()">The system should display the results to the user on the screen.</li>
+                    <li class="list1" id="list13" onclick="number13()">The system should store a history of user queries and their responses.</li>
+                    <li class="list1" id="list14" onclick="number14()">The system should provide the user with a clear history button and permission to clear history, and require a confirmation message before clearing.</li>
+                    <li class="list1" id="list15" onclick="number15()">The system should keep improving the training data set for improved AI models.</li>
+                    <li class="list1" id="list16" onclick="number16()">The system should be able to update the saved panel code and constitution according to the changes.</li>
+                    <li class="list1" id="list17" onclick="number17()">Download button should be provided by the system, so that users can download the responses.</li>
+                    <li class="list1" id="list18" onclick="number18()">The system should provide a share button that allows users to share their results via a link.</li>
+                    <li class="list1" id="list19" onclick="number19()">Feedback form should be provided by the system for the users to provide feedback on the system.</li>
+                    <li class="list1" id="list20" onclick="number20()">The system should provide a multithreaded approach for multiple users to access the app concurrently.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Non-Functional Requirement Section -->
+        <div class="box" id="box2">
+            <h3 class="h-secondary">Non-Functional Requirements</h3>
+            <div id="hide2">
+                <ul id="ul2">
+                    <li class="list2" id="list21" onclick="number21()">The system should protect user credentials.</li>
+                    <li class="list2" id="list22" onclick="number22()">The user's password should be hidden at login.</li>
+                    <li class="list2" id="list23" onclick="number23()">The system should protect the user's private information from unauthorized users.</li>
+                    <li class="list2" id="list24" onclick="number24()">System must be secure enough to prevent damage from unauthorized users.</li>
+                    <li class="list2" id="list25" onclick="number25()">The system should be immune to all kinds of attacks such as SQLI, DDOS, XSS.</li>
+                    <li class="list2" id="list26" onclick="number26()">Process of accessing user's sensitive data should be secured by the system.</li>
+                    <li class="list2" id="list27" onclick="number27()">Only  system administrators can assign roles and change system permissions.</li>
+                    <li class="list2" id="list28" onclick="number28()">A flexible service-based architecture should be ensured by the system.</li>
+                    <li class="list2" id="list29" onclick="number29()">It should provide an easy-to-understand interface.</li>
+                    <li class="list2" id="list30" onclick="number30()">The system must be available all the time(24/7).</li>
+                    <li class="list2" id="list31" onclick="number31()">It should take less than a second for the system to update and save all the information.</li>
+                    <li class="list2" id="list32" onclick="number32()">Better component design should be provided to the users.</li>
+                    <li class="list2" id="list33" onclick="number33()">The system should be modular and open to change with new features.</li>
+                    <li class="list2" id="list34" onclick="number34()">The system must take less than a second after clicking a link in the navigation bar.</li>
+                    <li class="list2" id="list35" onclick="number35()">App should be supported on at least all popular operating systems.</li>
+                    <li class="list2" id="list36" onclick="number36()">In-app instructions  should be  easy for users to understand.</li>
+                    <li class="list2" id="list37" onclick="number37()">In case of maintenance, users must be notified in advance.</li>
+                    <li class="list2" id="list38" onclick="number38()">In case of maintenance, users must be notified in advance.</li>
+                    <li class="list2" id="list39" onclick="number39()">The App should contain minimum steps (around 3-4 clicks) to complete a task.</li>
+                    <li class="list2" id="list40" onclick="number40()">The system should perform at its optimum during peak hours or when multiple users are using it at the same time.</li>
+                </ul>
+            </div>
+            <div class="btn-box">
+                <button id="btn1" class="btn" onclick="ToggleHide()">Hide</button>
+                <button id="btn2" class="btn" onclick="sorting()">Sort</button>
+                <button id="btn3" class="btn" onclick="shuffle()">Reshuffle</button>
+            </div>
+        </div>
+
+        <!-- Duration Section -->
+        <div class="box" id="box3">
+            <h3 class="h-secondary">Duration of Project</h3>
+            <p>According to Basic COCOMO Model:</p>
+            <p>Let line of codes = 3500 , then kloc = 3.5</p>
+            <p>Let the project be a Semi-Detached project, then the constant have these values:</p>
+            <p>a = 3</p>
+            <p>b = 1.12</p>
+            <p>c = 2.5</p>
+            <p>d = 0.35</p>
+            <p>Efforts = ax(kloc)^b</p>
+            <p>Efforts = 12.20 person/months</p>
+            <p>Duration = cx(Efforts)^d</p>
+            <p>Duration = 6 months</p>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div><i class="fa-brands fa-discord"></i>
+                <span>Shayan Hamid#8660</span>
+            </div>
+            <div><a href="mailto:shayanhamid031@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="mailto:shayanhamid031@gmail.com">shayanhamid031@gmail.com</a>
+        </div>
+        </footer>
+    </div>
+</body>
+<script>
+
+    // Hide/Show Function---------------------------------------------------------------------- 
+    function ToggleHide() {
+        let btn1 = document.getElementById('btn1');
+        if (hide2.style.display != 'none') {
+            hide2.style.display = 'none';
+            hide1.style.display = 'none';
+            btn1.innerHTML = 'Show';
+        }
+        else {
+            hide2.style.display = 'block';
+            hide1.style.display = 'block';
+            btn1.innerHTML = 'Hide';
+        }
+    }
+
+    // Sort Function-------------------------------------------------------------------------------
+    function sorting() {
+        let list1 = document.querySelectorAll('#ul1>li');
+        let list2 = document.querySelectorAll('#ul2>li');
+        let liArr1 = [];
+        let liArr2 = [];
+        for (let i = 0; i < list1.length; i++) {
+            liArr1.push(list1[i].innerHTML);
+            liArr2.push(list2[i].innerHTML);
+        }
+        liArr1 = liArr1.sort();
+        liArr2 = liArr2.sort();
+        for (let j = 0; j < liArr1.length; j++) {
+            list1[j].innerHTML = liArr1[j];
+            list2[j].innerHTML = liArr2[j];
+        }
+    }
+
+    //Reshuffle Function For Functional Requirements-------------------------------------------------
+    function shuffle(){
+       let list1 = document.querySelector('#ul1');
+       let list2 = document.querySelector('#ul2');
+      for (var i = list1.children.length; i >= 0; i--) {
+       list1.appendChild(list1.children[Math.random() * i | 0]);
+      }
+      for (let i = list2.children.length; i >= 0; i--) {
+       list2.appendChild(list2.children[Math.random() * i | 0]);
+      }
+    }
+
+    // Rshuffle Upon Page Reload---------------------------------------------------------------------
+    let list1 = document.querySelector('#ul1');
+       let list2 = document.querySelector('#ul2');
+      for (var i = list1.children.length; i >= 0; i--) {
+       list1.appendChild(list1.children[Math.random() * i | 0]);
+      }
+      for (let i = list2.children.length; i >= 0; i--) {
+       list2.appendChild(list2.children[Math.random() * i | 0]);
+      }
+
+    // Bonus Points Task----------------------------------------------------------------------
+    function number1() {
+        let listcount = document.getElementById('list1').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number2() {
+        let listcount = document.getElementById('list2').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number3() {
+        let listcount = document.getElementById('list3').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number4() {
+        let listcount = document.getElementById('list4').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number5() {
+        let listcount = document.getElementById('list5').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number6() {
+        let listcount = document.getElementById('list6').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number7() {
+        let listcount = document.getElementById('list7').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number8() {
+        let listcount = document.getElementById('list8').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number9() {
+        let listcount = document.getElementById('list9').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number10() {
+        let listcount = document.getElementById('list10').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number11() {
+        let listcount = document.getElementById('list11').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number12() {
+        let listcount = document.getElementById('list12').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number13() {
+        let listcount = document.getElementById('list13').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number14() {
+        let listcount = document.getElementById('list14').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number15() {
+        let listcount = document.getElementById('list15').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number16() {
+        let listcount = document.getElementById('list16').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number17() {
+        let listcount = document.getElementById('list17').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number18() {
+        let listcount = document.getElementById('list18').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number19() {
+        let listcount = document.getElementById('list19').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number20() {
+        let listcount = document.getElementById('list20').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number21() {
+        let listcount = document.getElementById('list21').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number22() {
+        let listcount = document.getElementById('list22').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number23() {
+        let listcount = document.getElementById('list23').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number24() {
+        let listcount = document.getElementById('list24').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number25() {
+        let listcount = document.getElementById('list25').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number26() {
+        let listcount = document.getElementById('list26').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number27() {
+        let listcount = document.getElementById('list27').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number28() {
+        let listcount = document.getElementById('list28').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number29() {
+        let listcount = document.getElementById('list29').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number30() {
+        let listcount = document.getElementById('list30').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number31() {
+        let listcount = document.getElementById('list31').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number32() {
+        let listcount = document.getElementById('list32').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number33() {
+        let listcount = document.getElementById('list33').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number34() {
+        let listcount = document.getElementById('list34').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number35() {
+        let listcount = document.getElementById('list35').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number36() {
+        let listcount = document.getElementById('list36').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number37() {
+        let listcount = document.getElementById('list37').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number38() {
+        let listcount = document.getElementById('list38').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number39() {
+        let listcount = document.getElementById('list39').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+    function number40() {
+        let listcount = document.getElementById('list40').innerHTML.split(" ").join("").length
+        alert("This list has " + listcount + " words.");
+    }
+</script>
+</html>
